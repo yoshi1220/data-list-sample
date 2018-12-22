@@ -15,3 +15,9 @@ configure :production do
 end
 
 enable :sessions
+
+class Reservation < ActiveRecord::Base
+  validates_presence_of :user_name
+  validates_presence_of :reservation_date
+  validates_presence_of :is_reserved
+end
